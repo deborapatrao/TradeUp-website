@@ -1,0 +1,19 @@
+@use '../variables/colors' as c;
+
+header{
+    background-color: c.$secondary-white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    //REMOVE
+    // border-bottom: 2px solid tomato;
+
+    .container{
+        padding: 1rem 4%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,0 +1,125 @@
+@use '../variables/colors' as c;
+@use '../mixins/mixins' as mi;
+@use '../variables/fonts' as f;
+
+
+.navigation{
+    
+    &__menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: c.$secondary-dark;
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        &__toggle{
+            border: none;
+            background: none;
+            position:absolute;
+            inset: 0 0 0 87%; 
+            z-index: 1000;
+            
+
+            .hamburguer,
+            .hamburguer::after,
+            .hamburguer::before{
+                height: 3px;
+                background-color: c.$primary-dark;
+                display: block;
+                border-radius: 2px;
+                transition: all 500ms ease-out;
+            } 
+
+            .hamburguer{
+                position: relative;
+                width: 25px;
+
+                &::after{
+                    content:"";
+                    position: absolute;
+                    width: 13px;
+                    bottom: 7px;
+                    right: 0;
+                }
+
+                &::before{
+                    content:"";
+                    position: absolute;
+                    width: 13px;
+                    top: 7px;
+                    left: 0;
+                }
+            }
+
+            &[aria-expanded="true"]{
+                .hamburguer,
+                .hamburguer::after,
+                .hamburguer::before{
+                    background-color: c.$secondary-white;
+                }
+
+                .hamburguer{
+                    transform: rotate(45deg);
+
+                    &::after{
+                        transform: rotate(-90deg) translateY(-6px) translateX(-1px);
+                    }
+                    
+                    &::before{
+                        transform: rotate(90deg)translateY(-6px) translateX(-1px);
+                        
+                    }
+                }
+
+            }
+            
+        }
+
+        &__menu{
+            position: fixed;
+            inset: 0 0 0 0;
+            background-color: c.$primary-dark;
+            display: flex;
+
+            transform: translateY(-100%);
+            transition: transform 500ms ease-out;
+
+            flex-flow: column;
+            align-items: center;
+            justify-content: start;
+            padding-top: 8rem;
+
+            &[data-visible="true"]{
+                transform: translateY(0%);
+            }
+
+            li{
+                margin-bottom: 3rem;
+                a{
+                    color: c.$secondary-white;
+                    font-size: f.$font-lg;
+                }
+            }
+        }
+    }
+
+    @include mi.mediaQuery(mi.$desktop){
+        
+        &__toggle{
+            display: none;
+        }
+
+        a{
+            &.active{
+                color: c.$primary-dark;
+            }
+        }
+    }
+    
+}
