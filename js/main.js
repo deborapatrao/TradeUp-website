@@ -1,3 +1,8 @@
+
+// **********************
+// ***** NAVIGATION *****
+// **********************
+
 const primaryNav = document.querySelector('.navigation__menu');
 const navToggle = document.querySelector('.navigation__toggle');
 
@@ -12,3 +17,16 @@ navToggle.addEventListener('click', () => {
         navToggle.setAttribute('aria-expanded', 'false')
     }
 });
+
+// ******************
+// ***** SWIPER *****
+// ******************
+
+new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 1.8,
+    spaceBetween: 30,
+    slidesOffsetAfter: 80,
+  });

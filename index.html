@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trade Up</title>
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="js/main.js" defer></script>
   </head>
@@ -107,22 +111,67 @@
         </div>
       </section>
 
-      <section>
-        <div>
-          <h2>App Features</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque consectetur condimentum purus, at gravida enim rhoncus
-            ac.Proin a nunc ex. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Donec sed purus quis turpis mattis
-            consectetur.Proin pretium ultricies nunc tincidunt sollicitudin.
-            Donec mollis leo quis tempus pellentesque. Donec rutrum suscipit
-            augue
-          </p>
+      <section class="features">
+        <div class="container">
+          <div>
+            <h2>App Features</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Pellentesque consectetur condimentum purus, at gravida enim
+              rhoncus ac.Proin a nunc ex. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Donec sed purus quis turpis mattis
+              consectetur.Proin pretium ultricies nunc tincidunt sollicitudin.
+              Donec mollis leo quis tempus pellentesque. Donec rutrum suscipit
+              augue
+            </p>
+          </div>
         </div>
-        <!-- scroller -->
-        <div></div>
       </section>
+
+      <!-- scroller -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-slide__img">
+              <img src="/images/learning.svg" alt="" />
+            </div>
+            <div class="swiper-slide__text">
+              <h3>Learning</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque consectetur condimentum purus.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="swiper-slide__img">
+              <img src="/images/cryptowatch.svg" alt="" />
+            </div>
+            <div class="swiper-slide__text">
+              <h3>Cryptowatch</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque consectetur condimentum purus.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="swiper-slide__img">
+              <img src="/images/paper-based.svg" alt="" />
+            </div>
+            <div class="swiper-slide__text">
+              <h3>Paper-based</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque consectetur condimentum purus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Swiper finish -->
 
       <section>
         <div>
@@ -154,5 +203,6 @@
       </section>
     </main>
     <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>

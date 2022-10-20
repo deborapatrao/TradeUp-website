@@ -357,6 +357,8 @@ body {
 h1, h2 {
   font-size: 3rem;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -378,6 +380,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: auto;
 }
 
 .navigation__menu {
@@ -488,15 +491,9 @@ header .container {
   padding: 0 2%;
 }
 
-.home h1,
-.home h2 {
-  margin: 0;
-  padding: 0;
-}
 .home .hero {
   background-image: linear-gradient(#171122 70%, #fff 70%);
   color: #fff;
-  padding: 2rem 0;
 }
 .home .about__heading {
   text-align: center;
@@ -515,6 +512,43 @@ header .container {
   color: #fff;
   border-radius: 55px 0;
   padding: 1rem 1.5rem;
+}
+.home .features {
+  text-align: center;
+}
+
+.swiper-wrapper {
+  padding: 2rem 2%;
+}
+.swiper-slide {
+  border-radius: 15px;
+  box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0.5rem;
+  width: 210px;
+}
+.swiper-slide__img {
+  background-color: #171122;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.swiper-slide__img img {
+  max-width: 50%;
+}
+.swiper-slide__img img:nth-of-type(1), .swiper-slide__img img:nth-of-type(2) {
+  padding-left: 7px;
+}
+.swiper-slide__text h3 {
+  text-transform: uppercase;
+}
+.swiper-slide__text p {
+  color: #7F7F7F;
 }
 
 /*# sourceMappingURL=style.css.map */
