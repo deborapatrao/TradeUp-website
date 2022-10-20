@@ -1,0 +1,47 @@
+@use '../variables/colors' as c;
+
+.container{
+    padding: 0 2%;
+}
+
+.home{
+    //HERO
+    h1,
+    h2{
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero{
+        background-image: linear-gradient(c.$primary-dark 70%, c.$secondary-white 70%);
+        color: c.$secondary-white;
+        padding: 2rem 0;
+    }
+
+    //ABOUT OUR APP
+    .about{
+        &__heading{
+            text-align: center;
+        }
+
+        img{
+            box-sizing: border-box;
+            padding: 0 4rem 1rem 4rem;
+        }
+
+        &__items{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            &-uni{
+                background-color: c.$primary-dark;
+                color: c.$secondary-white;
+                border-radius: 55px 0;
+                padding: 1rem 1.5rem;
+            }
+        }
+    }
+
+}
+
