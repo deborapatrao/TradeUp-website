@@ -1,8 +1,13 @@
 @use '../variables/colors' as c;
 @use '../variables/fonts' as f;
+@use '../mixins/mixins' as mi;
 
 .container{
     padding: 0 2%;
+    @include mi.mediaQuery(mi.$desktop){
+        max-width: 1240px;
+        margin: auto;
+    }
 }
 
 .home{
@@ -11,6 +16,20 @@
         background-image: linear-gradient(c.$primary-dark 70%, c.$secondary-white 70%);
         color: c.$secondary-white;
         padding-top: 2rem;
+
+        @include mi.mediaQuery(mi.$desktop){
+            background-image: linear-gradient(c.$primary-dark 80%, c.$secondary-white 80%);
+
+            & .container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &__text{
+                margin-top: -13%;
+                max-width: 410px;
+            }
+        }
     }
 
     //ABOUT OUR APP
@@ -34,6 +53,26 @@
                 color: c.$secondary-white;
                 border-radius: 55px 0;
                 padding: 1rem 1.5rem;
+            }
+        }
+
+        @include mi.mediaQuery(mi.$desktop){
+            &__body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &-img{
+                    flex-basis: 50%;
+                }
+            }
+
+            &__items{
+                flex-basis: 50%;
+            }
+
+            img{
+                max-width: 550px;
             }
         }
     }
@@ -64,6 +103,19 @@
         h2{
             font-size: f.$font-3xl;
             margin: 0 3rem;
+        }
+
+        @include mi.mediaQuery(mi.$desktop){
+            & .container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            &__text{
+                flex-basis: 50%;
+            }
         }
     }
 

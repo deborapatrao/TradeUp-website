@@ -1,0 +1,58 @@
+@use '../variables/colors' as c;
+
+// HAMBURGUER BUTTON
+@media only screen and (max-width: 1000px) {
+    .navigation__toggle{
+        .hamburguer,
+        .hamburguer::after,
+        .hamburguer::before{
+            height: 3px;
+            background-color: c.$primary-dark;
+            display: block;
+            border-radius: 2px;
+            transition: all 500ms ease-out;
+        } 
+
+        .hamburguer{
+            position: relative;
+            width: 25px;
+
+            &::after{
+                content:"";
+                position: absolute;
+                width: 13px;
+                bottom: 7px;
+                right: 0;
+            }
+
+            &::before{
+                content:"";
+                position: absolute;
+                width: 13px;
+                top: 7px;
+                left: 0;
+            }
+        }
+
+        &[aria-expanded="true"]{
+            .hamburguer,
+            .hamburguer::after,
+            .hamburguer::before{
+                background-color: c.$secondary-white;
+            }
+
+            .hamburguer{
+                transform: rotate(45deg);
+
+                &::after{
+                    transform: rotate(-90deg) translateY(-6px) translateX(-1px);
+                }
+                
+                &::before{
+                    transform: rotate(90deg)translateY(-6px) translateX(-1px);
+                    
+                }
+            }
+        }
+    }
+}

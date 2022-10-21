@@ -350,7 +350,7 @@ template {
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.25;
 }
 
@@ -401,6 +401,167 @@ img {
     inset: 0 0 0 87%;
     z-index: 1000;
   }
+  .navigation__menu {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: #171122;
+    display: flex;
+    transform: translateY(-100%);
+    transition: transform 500ms ease-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 8rem;
+  }
+  .navigation__menu[data-visible=true] {
+    transform: translateY(0%);
+  }
+  .navigation__menu li {
+    margin-bottom: 3rem;
+  }
+  .navigation__menu li a {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .navigation__toggle {
+    display: none;
+  }
+  .navigation__menu {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+  }
+  .navigation a.active {
+    color: #171122;
+  }
+}
+
+header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+header .container {
+  padding: 1rem 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  padding: 0 2%;
+}
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 1240px;
+    margin: auto;
+  }
+}
+
+.home .hero {
+  background-image: linear-gradient(#171122 70%, #fff 70%);
+  color: #fff;
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 1000px) {
+  .home .hero {
+    background-image: linear-gradient(#171122 80%, #fff 80%);
+  }
+  .home .hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .hero__text {
+    margin-top: -13%;
+    max-width: 410px;
+  }
+}
+.home .about__heading {
+  text-align: center;
+}
+.home .about img {
+  box-sizing: border-box;
+  padding: 0 4rem 1rem 4rem;
+}
+.home .about__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.home .about__items-uni {
+  background-color: #171122;
+  color: #fff;
+  border-radius: 55px 0;
+  padding: 1rem 1.5rem;
+}
+@media only screen and (min-width: 1000px) {
+  .home .about__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .about__body-img {
+    flex-basis: 50%;
+  }
+  .home .about__items {
+    flex-basis: 50%;
+  }
+  .home .about img {
+    max-width: 550px;
+  }
+}
+.home section:not(:first-of-type) {
+  margin-top: 4rem;
+}
+.home .features {
+  text-align: center;
+}
+.home .interface {
+  text-align: center;
+  color: #fff;
+  background-color: #171122;
+  border-radius: 0 100px;
+  padding: 3.5rem 0;
+}
+.home .cta {
+  text-align: center;
+}
+.home .cta h2 {
+  font-size: 3rem;
+  margin: 0 3rem;
+}
+@media only screen and (min-width: 1000px) {
+  .home .cta .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .home .cta__text {
+    flex-basis: 50%;
+  }
+}
+
+footer {
+  background-color: #171122;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  margin-top: 3rem;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
   .navigation__toggle .hamburguer,
 .navigation__toggle .hamburguer::after,
 .navigation__toggle .hamburguer::before {
@@ -442,102 +603,14 @@ img {
   .navigation__toggle[aria-expanded=true] .hamburguer::before {
     transform: rotate(90deg) translateY(-6px) translateX(-1px);
   }
-  .navigation__menu {
-    position: fixed;
-    inset: 0 0 0 0;
-    background-color: #171122;
-    display: flex;
-    transform: translateY(-100%);
-    transition: transform 500ms ease-out;
-    flex-flow: column;
-    align-items: center;
-    justify-content: start;
-    padding-top: 8rem;
-  }
-  .navigation__menu[data-visible=true] {
-    transform: translateY(0%);
-  }
-  .navigation__menu li {
-    margin-bottom: 3rem;
-  }
-  .navigation__menu li a {
-    color: #fff;
-    font-size: 1.5rem;
-  }
 }
-@media only screen and (min-width: 1000px) {
-  .navigation__toggle {
-    display: none;
-  }
-  .navigation a.active {
-    color: #171122;
-  }
-}
-
-header {
-  background-color: #fff;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
-header .container {
-  padding: 1rem 4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.container {
-  padding: 0 2%;
-}
-
-.home .hero {
-  background-image: linear-gradient(#171122 70%, #fff 70%);
-  color: #fff;
-  padding-top: 2rem;
-}
-.home .about__heading {
-  text-align: center;
-}
-.home .about img {
-  box-sizing: border-box;
-  padding: 0 4rem 1rem 4rem;
-}
-.home .about__items {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.home .about__items-uni {
-  background-color: #171122;
-  color: #fff;
-  border-radius: 55px 0;
-  padding: 1rem 1.5rem;
-}
-.home section:not(:first-of-type) {
-  margin-top: 4rem;
-}
-.home .features {
-  text-align: center;
-}
-.home .interface {
-  text-align: center;
-  color: #fff;
-  background-color: #171122;
-  border-radius: 0 100px;
-  padding: 3.5rem 0;
-}
-.home .cta {
-  text-align: center;
-}
-.home .cta h2 {
-  font-size: 3rem;
-  margin: 0 3rem;
-}
-
 .swiper-wrapper {
   padding: 2rem 2%;
+}
+@media only screen and (min-width: 1000px) {
+  .swiper-wrapper {
+    justify-content: center;
+  }
 }
 .swiper-slide {
   border-radius: 15px;
@@ -547,7 +620,6 @@ header .container {
   flex-direction: column;
   align-items: center;
   padding: 2rem 0.5rem;
-  width: 210px;
 }
 .swiper-slide__img {
   background-color: #171122;
@@ -568,20 +640,6 @@ header .container {
 }
 .swiper-slide__text p {
   color: #7F7F7F;
-}
-
-footer {
-  background-color: #171122;
-  color: #fff;
-  padding: 2rem 0 1rem 0;
-  margin-top: 3rem;
-}
-footer .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -29,4 +29,12 @@ new Swiper('.swiper', {
     slidesPerView: 1.8,
     spaceBetween: 30,
     slidesOffsetAfter: 80,
+    breakpoints:{
+
+        1000:{
+            slidesPerView: 3,
+            enabled: false,
+            width: 900,
+        }
+    }
   });
