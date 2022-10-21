@@ -479,6 +479,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 header .container {
   padding: 1rem 4%;
@@ -513,8 +514,25 @@ header .container {
   border-radius: 55px 0;
   padding: 1rem 1.5rem;
 }
+.home section:not(:first-of-type) {
+  margin-top: 4rem;
+}
 .home .features {
   text-align: center;
+}
+.home .interface {
+  text-align: center;
+  color: #fff;
+  background-color: #171122;
+  border-radius: 0 100px;
+  padding: 3.5rem 0;
+}
+.home .cta {
+  text-align: center;
+}
+.home .cta h2 {
+  font-size: 3rem;
+  margin: 0 3rem;
 }
 
 .swiper-wrapper {
