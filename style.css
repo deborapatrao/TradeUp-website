@@ -453,12 +453,13 @@ header .container {
 }
 
 .container {
-  padding: 0 2%;
+  padding: 0 20px;
 }
 @media only screen and (min-width: 1000px) {
   .container {
     max-width: 1240px;
     margin: auto;
+    padding: 0 100px;
   }
 }
 

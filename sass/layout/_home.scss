@@ -3,10 +3,11 @@
 @use '../mixins/mixins' as mi;
 
 .container{
-    padding: 0 2%;
+    padding: 0 20px;
     @include mi.mediaQuery(mi.$desktop){
         max-width: 1240px;
         margin: auto;
+        padding: 0 100px;
     }
 }
 
