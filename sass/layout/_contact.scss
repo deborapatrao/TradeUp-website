@@ -1,6 +1,12 @@
-@use '../variables/fonts' as t;
+@use '../variables/fonts' as f;
+@use '../variables/colors' as c;
+@use '../mixins/mixins' as mi;
 
 .contact{
+    section{
+        margin-top: 2rem;
+    }
+
     .intro{
         text-align: center;
     }
@@ -9,24 +15,55 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
-        column-gap: 1rem;
+        column-gap: 2rem;
+        justify-items: center;
+
+        @include mi.mediaQuery(mi.$tablet){
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         &__member{
             
             &-img{
                 box-shadow: 8px 10px 20px rgba(0, 0, 0, .2);
-                border-radius: 10px;
+                border-radius: 20px;
+                
+                height: 160px;
+                width: 140px;
+                display: flex;
+                align-items: start;
+
+                @include mi.mediaQuery(mi.$tablet){
+                    width: 150px;
+                }
+
+                @include mi.mediaQuery(mi.$desktop){
+                    width: 230px;
+                    height: 250px;
+                }
+
+                img{
+                    margin-bottom: 0;
+                }
             }
             
             &-info{
+                margin-top: 1rem;
 
                 &-name{
                     margin: 0;
-                    font-size: t.$font-s;
+                    font-size: f.$font-s;
                 }
 
                 p{
                     margin: 0;
+                }
+
+                &-links{
+                    font-size: f.$font-md;
+                    a{
+                        color: c.$primary-dark;
+                    }
                 }
             }
         }
