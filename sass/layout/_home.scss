@@ -1,6 +1,7 @@
 @use '../variables/colors' as c;
 @use '../variables/fonts' as f;
 @use '../mixins/mixins' as mi;
+@use '../animations/animations' as an;
 
 .container{
     padding: 0 20px;
@@ -38,7 +39,15 @@
         &__heading{
             text-align: center;
         }
-
+        &__body{
+            &-img{
+                animation-name: float;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        }
         img{
             box-sizing: border-box;
             padding: 0 4rem 1rem 4rem;
