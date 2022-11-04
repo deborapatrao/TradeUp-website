@@ -1,0 +1,78 @@
+@use '../variables/colors' as c;
+@use '../mixins/mixins' as mi;
+@use '../variables/fonts' as f;
+
+
+.navigation{
+    
+    &__menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: c.$secondary-dark;
+    }
+    
+    //MOBILE NAVIGATION
+    @media only screen and (max-width: 1000px) {
+        &__toggle{
+            border: none;
+            background: none;
+            position:absolute;
+            inset: 0 0 0 87%; 
+            z-index: 1000;           
+        }
+
+        &__menu{
+            position: fixed;
+            inset: 0 0 0 0;
+            background-color: c.$primary-dark;
+            display: flex;
+
+            transform: translateY(-100%);
+            transition: transform 500ms ease-out;
+
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding-top: 8rem;
+
+            &[data-visible="true"]{
+                transform: translateY(0%);
+            }
+
+            li{
+                margin-bottom: 3rem;
+                a{
+                    color: c.$secondary-white;
+                    font-size: f.$font-lg;
+                }
+            }
+        }
+    }
+
+    //DESKTOP NAVIGATION
+    @include mi.mediaQuery(mi.$desktop){
+        
+        &__toggle{
+            display: none;
+        }
+
+        &__menu{
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 2rem;
+        }
+
+        a{
+            &.active{
+                color: c.$primary-dark;
+            }
+        }
+    }
+    
+}

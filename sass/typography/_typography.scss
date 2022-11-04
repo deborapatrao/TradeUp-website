@@ -1,0 +1,30 @@
+@use "../variables/fonts" as f;
+
+body{
+    font-family: f.$font-body;
+    font-size: f.$font-s;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h1, h2{
+    font-size: f.$font-3xl;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: f.$font-2xl;
+    font-weight: 600;
+}
+
+h3{
+    font-size: f.$font-md;
+    font-weight: 600;
+}
+
+.subheading{
+    font-size: f.$font-lg;
+    font-weight: 600;
+}
