@@ -441,7 +441,29 @@ img {
     flex-flow: row nowrap;
     gap: 2rem;
   }
+  .navigation a {
+    position: relative;
+    transition: all 0.5s;
+  }
   .navigation a.active {
+    color: #171122;
+    font-weight: 600;
+  }
+  .navigation a::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background-color: #171122;
+    transform: scale(0);
+    transition: all 0.5s;
+  }
+  .navigation a:hover::before {
+    transform: scale(1);
+  }
+  .navigation a:hover {
     color: #171122;
   }
 }
