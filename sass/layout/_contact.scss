@@ -28,19 +28,11 @@
                 box-shadow: 8px 10px 20px rgba(0, 0, 0, .2);
                 border-radius: 20px;
                 
-                height: 160px;
-                width: 140px;
+                
                 display: flex;
                 align-items: start;
 
-                @include mi.mediaQuery(mi.$tablet){
-                    width: 150px;
-                }
-
-                @include mi.mediaQuery(mi.$desktop){
-                    width: 230px;
-                    height: 250px;
-                }
+              
 
                 img{
                     margin-bottom: 0;
@@ -64,9 +56,8 @@
                     a{
                         color: c.$primary-dark;
                     }
-                    img{
-                        display: inline;
-                    }
+                    
+                    
                 }
             }
         }

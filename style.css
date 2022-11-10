@@ -391,6 +391,14 @@ img {
   margin: auto;
 }
 
+.contact .team__member-img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.contact .team__member-info-links img {
+  display: inline-block;
+}
+
 .navigation__menu {
   list-style: none;
   padding: 0;
@@ -474,6 +482,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
+  border-bottom: 1px solid #f2f2f2;
 }
 header .container {
   padding: 1rem 4%;
@@ -599,28 +608,6 @@ footer .container {
   gap: 0.5rem;
 }
 
-.about-us {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-}
-.about-us main {
-  text-align: center;
-  margin-top: 2rem;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-}
-.about-us main .container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.about-us main img {
-  border-radius: 10px;
-}
-
 .contact section {
   margin-top: 2rem;
 }
@@ -642,21 +629,8 @@ footer .container {
 .contact .team__member-img {
   box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  height: 160px;
-  width: 140px;
   display: flex;
   align-items: start;
-}
-@media only screen and (min-width: 600px) {
-  .contact .team__member-img {
-    width: 150px;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .contact .team__member-img {
-    width: 230px;
-    height: 250px;
-  }
 }
 .contact .team__member-img img {
   margin-bottom: 0;
@@ -676,9 +650,6 @@ footer .container {
 }
 .contact .team__member-info-links a {
   color: #171122;
-}
-.contact .team__member-info-links img {
-  display: inline;
 }
 
 @media only screen and (max-width: 1000px) {
