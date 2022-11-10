@@ -1,4 +1,30 @@
+@use '../mixins/mixins' as mi;
+
 .about-us{
+    section{
+        margin-top: 2rem;
 
+        .content-text{
+            margin-bottom: 2rem;
+        }
 
+        @include mi.mediaQuery(mi.$desktop){
+
+            .content{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            &:nth-of-type(odd) .content-text{
+                padding-left: 2rem;
+                order: 2;
+            }
+
+            &:nth-of-type(even) .content-text{
+            padding-right: 2rem;
+            }
+        }
+    }
 }

@@ -608,6 +608,28 @@ footer .container {
   gap: 0.5rem;
 }
 
+.about-us section {
+  margin-top: 2rem;
+}
+.about-us section .content-text {
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 1000px) {
+  .about-us section .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+  .about-us section:nth-of-type(odd) .content-text {
+    padding-left: 2rem;
+    order: 2;
+  }
+  .about-us section:nth-of-type(even) .content-text {
+    padding-right: 2rem;
+  }
+}
+
 .contact section {
   margin-top: 2rem;
 }
