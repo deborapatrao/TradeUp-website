@@ -714,7 +714,7 @@ footer .container {
     transform: rotate(-90deg) translateY(-6px) translateX(-1px);
   }
   .navigation__toggle[aria-expanded=true] .hamburguer::before {
-    transform: rotate(90deg) translateY(-6px) translateX(-1px);
+    transform: rotate(-90deg) translateY(6px) translateX(1px);
   }
 }
 .swiper-wrapper {
