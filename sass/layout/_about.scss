@@ -1,25 +1,30 @@
+@use '../mixins/mixins' as mi;
+
 .about-us{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+    section{
+        margin-top: 2rem;
 
-    main{
-    text-align: center;
-    margin-top: 2rem;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-
-        .container{
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        .content-text{
+            margin-bottom: 2rem;
         }
 
-        img{
-            border-radius: 10px;
+        @include mi.mediaQuery(mi.$desktop){
+
+            .content{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            &:nth-of-type(odd) .content-text{
+                padding-left: 2rem;
+                order: 2;
+            }
+
+            &:nth-of-type(even) .content-text{
+            padding-right: 2rem;
+            }
         }
     }
-
 }

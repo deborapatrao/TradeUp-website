@@ -4,3 +4,19 @@ img {
     display: block;
     margin: auto;
 }
+
+.contact{
+    .team__member{
+        &-img{
+        border-radius: 10px;
+        overflow: hidden;
+        }
+
+        &-info-links{
+            img{
+                display: inline-block;
+            }
+        }
+    }
+}
+
