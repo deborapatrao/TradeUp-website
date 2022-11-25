@@ -518,7 +518,8 @@ header .container {
   }
   .home .hero__text {
     margin-top: -13%;
-    max-width: 410px;
+    padding-right: 3rem;
+    max-width: 500px;
   }
 }
 .home .about__heading {
